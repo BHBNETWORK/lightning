@@ -132,9 +132,7 @@ static const struct bitcoin_tx *bitcoin_spend_ours(struct peer *peer)
 	tx->input[0].amount = tal_dup(tx->input, u64,
 				      &commit->output[p2wsh_out].amount);
 
-	tx->output[0].script = scriptpubkey_p2sh(tx,
-				 bitcoin_redeem_single(tx,
-						       &peer->local.finalkey));
+	tx->output[0].script = scriptpubkey_p2wpkh(tx, &peer->local.finalkey);
 
 	/* Witness length can vary, due to DER encoding of sigs, but we
 	 * use 176 from an example run. */
