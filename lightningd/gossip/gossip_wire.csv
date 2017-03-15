@@ -53,3 +53,14 @@ gossip_getnodes_request,5
 gossip_getnodes_reply,105
 gossip_getnodes_reply,0,replen,2,u16
 gossip_getnodes_reply,2,reply,replen,u8
+
+# Pass JSON-RPC getroute call through
+gossip_getroute_request,6
+gossip_getroute_request,0,source,33,struct pubkey
+gossip_getroute_request,33,destination,33,struct pubkey
+gossip_getroute_request,66,msatoshi,4,u32
+gossip_getroute_request,70,riskfactor,2,u16
+
+gossip_getroute_reply,106
+gossip_getroute_reply,0,replen,2,u16
+gossip_getroute_reply,2,reply,replen,u8
