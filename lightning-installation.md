@@ -29,5 +29,6 @@ make
 ```
 
 
+This documentation is released under:
 [CC0 1.0 Universal - Public Domain
 2017 Blockchainlab.it](https://creativecommons.org/publicdomain/zero/1.0/)
