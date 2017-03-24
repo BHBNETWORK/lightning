@@ -1,4 +1,4 @@
-# Lightning Network legacy `azure`
+# Lightning Network legacy on `azure`
 
 This is a fork of [cdecker/lightning](https://github.com/cdecker/lightning)
 
@@ -21,3 +21,7 @@ Unilateral closing channel is not working nor will be develop in this legacy ver
 ## Testing
 
 We tested successfully, "star configuration" both on `testnet` and `shared regtest`
+
+This documentation is released under:
+[CC0 1.0 Universal - Public Domain
+2017 Blockchainlab.it](https://creativecommons.org/publicdomain/zero/1.0/)
