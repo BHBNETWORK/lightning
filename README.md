@@ -2,7 +2,7 @@
 
 This is a fork of [cdecker/lightning](https://github.com/cdecker/lightning)
 
-`azure`'s branch extend the legacy lightning version (staged in folder [daemon](deamon)) with:
+`azure`'s branch extend the legacy lightning version (staged in folder [tree/azure/daemon](deamon)) with:
 * pinging every seconds the connection to make it alive
 * adding parameter `--payout-address` as explained in [payout-address](https://github.com/BHBNETWORK/lightning/commit/f94d912659a6663fb5d1bbc1cc2929ff7bf34cf6)
 
