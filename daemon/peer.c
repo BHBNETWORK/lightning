@@ -1861,8 +1861,13 @@ static bool peer_start_shutdown(struct peer *peer)
 	assert(!peer->closing.our_script);
 
 	redeemscript = bitcoin_redeem_single(peer, &peer->local.finalkey);
-
-	peer->closing.our_script = scriptpubkey_p2sh(peer, redeemscript);
+	
+	if (!memeqzero(&peer->dstate->config.finaladdress, sizeof(&peer->dstate->config.finaladdress))) {
+		peer->closing.our_script = scriptpubkey_p2addr(
+			peer, &peer->dstate->config.finaladdress);
+	}else{
+		peer->closing.our_script = scriptpubkey_p2pkh(peer, &peer->local.finalkey);
+	}
 	tal_free(redeemscript);
 
 	/* FIXME-OLD #2:
