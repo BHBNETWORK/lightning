@@ -20,7 +20,7 @@
 #include <errno.h>
 #include <inttypes.h>
 
-#define BITCOIN_CLI "bitcoin-cli"
+#define BITCOIN_CLI "/home/poc/development/bitcoin/src/bitcoin-cli"
 
 char *bitcoin_datadir;
 

@@ -267,7 +267,7 @@ void setup_irc_connection(struct lightningd_state *dstate)
 
 	struct ircstate *state = talz(dstate, struct ircstate);
 	state->dstate = dstate;
-	state->server = "irc.lfnet.org";
+	state->server = "127.0.0.1";
 	state->reconnect_timeout = time_from_sec(15);
 	state->log = new_log(state, state->dstate->log_book, "%s:irc",
 			     log_prefix(state->dstate->base_log));
